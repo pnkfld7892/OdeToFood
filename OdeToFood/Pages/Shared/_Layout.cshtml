@@ -26,13 +26,17 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Restaurants/List">Restaurants</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -41,7 +45,9 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - OdeToFood - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            @RenderSection("footer", required: false)
+            <vc:restaurant-count></vc:restaurant-count>
+            &copy; 2019 - OdeToFood  - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
