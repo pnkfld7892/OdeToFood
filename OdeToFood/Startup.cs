@@ -28,7 +28,7 @@ namespace OdeToFood
 
             services.AddDbContextPool<OdeToFoodDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("OdeToFoodDb"));
+                options.UseSqlServer(Configuration.GetConnectionString("OdeToFoodDbHome"));
             });
 
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
