@@ -1,0 +1,17 @@
+@page
+@model OdeToFood.Pages.Restaurants.ClientRestaurantsModel
+@{
+}
+
+@section Scripts{
+    <script>
+        <!-- this is just for demo  -->
+        $(function(){
+            $.ajax("/api/restaurants/",{method:"get"})
+            .then(function(response){
+                console.dir(response);
+            })
+        });
+    </script>
+}
+
